@@ -20,38 +20,29 @@ LocationTabView.prototype.load = function(index) {
 
 	console.log(locationDiv)
 	
-	this.left = locationDiv.getBoundingClientRect().left + 'px'
+	var left = locationDiv.getBoundingClientRect().left + 'px'
 
-	this.top = locationDiv.getBoundingClientRect().bottom + 'px'
-	
-	$(window).resize(function(){
-		
-		this.left = locationDiv.getBoundingClientRect().left + 'px'
-
-	    this.top = locationDiv.getBoundingClientRect().bottom + 'px'
-		
-	}.bind(this))
-	
+	var top = locationDiv.getBoundingClientRect().bottom + 'px'
 	
 	if(this.$tab){
 		
 		this.$tab.show().css({
 			
-				left: this.left,
-		top: this.top
+			left: left,
+			top:top
 		})
 		
 		return
 	}
-
+ 
 	//创建locationTabView的界面
 	this.$tab = $("<div class='locationBox'>").css({
 
 		border: '1px solid silver',
 		backgroundColor: 'white',
 		position: 'absolute',
-		left: this.left,
-		top: this.top
+		left: left,
+		top:top
 
 	}).appendTo($('body')).append($("<ul class='cityList'>").css({
 
