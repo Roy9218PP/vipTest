@@ -1,0 +1,179 @@
+//主题颜色
+@skinColor: #F10180;
+//基本字体
+@baseFontSize: 15px;
+//固定宽度
+@baseWidth: 1000px;
+
+//正常的文本颜色
+@normalTextColor: #666666;
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-size: @baseFontSize;
+    position: relative;
+    
+}
+.content {
+    width: @baseWidth;
+    height: 100%;
+    margin: 0 auto;
+    //background-color: red;
+}
+.header-part1 {
+    height: 30px;
+    background-color: #F5F5F5;
+    .container1 {
+         a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 30px;
+            color: @normalTextColor;
+            
+        }
+        a:hover{
+            color: @skinColor;
+        }
+        .header-location {
+            width: 80px;
+            height: 100%;
+            //background-color: darkcyan;
+            display: inline-block;
+            text-align: center;
+        }
+        .header-user{
+            
+            list-style-type: none;
+            padding: 0;
+            display: inline-block;
+            margin: 0;
+            margin-left: 200px;
+            li{
+                display: inline-block;
+  
+            }
+            
+            li:after{
+                
+                content: '/';
+                padding: 1rem;
+                font-size: 0.6rem;
+                color: lightgray;
+            }
+        }
+       
+    }
+}
+
+.header-part2 {
+    background-color: white;
+    position: relative;
+    height: 100px;
+    line-height: 100px;
+    overflow: hidden;
+    .container2 {
+        background-color: white;
+        .banner,
+        .adList {
+            line-height: 100px;
+            float: left;
+            overflow: hidden;
+            height: 100%;
+            ul {
+                width: 700px;
+                list-style-type: none;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                li {
+                    height: 100%;
+                    line-height: 100px;
+                    a {
+                        display: inline-block;
+                        height: 100%;
+                        text-decoration: none;
+                        font-size: 0.8rem;
+                        img {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-part3 {
+    height: 40px;
+    background-color: @skinColor;
+    overflow: hidden;
+    .container3 ul {
+        padding: 0;
+        height: 100%;
+        list-style-type: none;
+        margin: 0;
+        li {
+            float: left;
+            display: inline-block;
+            padding: 0 15px;
+            margin-right: 10px;
+            line-height: 40px;
+            position: relative;
+            a {
+                display: inline-block;
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+                color: white;
+            }
+        }
+        li:hover {
+            background-color: rgba(0,0,0,0.3);
+        }
+    }
+}
+.container3 li:nth-last-of-type(1),
+.container3 li:nth-last-of-type(2) {
+    width: 85px;
+    text-align: right;
+}
+.container3 li:nth-last-of-type(1) {
+    float: right;
+    a {
+        background-image: url("../img/kind.png");
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+}
+.container3 li:nth-last-of-type(2) a {
+    background-image: url("../img/more.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+.bgImg {
+    height: 500px;
+    position: relative;
+    background-image: url("../img/Olympic_1000.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    img{
+        display: block;
+        width: @baseWidth;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    img:nth-child(1) {
+      
+        border: 10px solid white;  
+    }
+    
+}
